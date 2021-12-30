@@ -32,21 +32,33 @@
 					val.style.display = 'table-row';
 				});
 
-				document.getElementById("00N5j000008EH8N").required=true;
-				document.getElementById("00N5j000008EH8S").required=true;
-				document.getElementById("00N5j000008EH8h").required=true; 
+				document.getElementById("00N5j000008EH8N").required = true;
+				document.getElementById("00N5j000008EH8S").required = true;
+				document.getElementById("00N5j000008EH8h").required = true;
 			}
-			else{
+			else {
 				document.querySelectorAll("#ifYesStaffName, #ifYesStaffId, #ifYesStaffContactNo").forEach(function (val) {
 					val.style.display = 'none';
 				});
 
-				document.getElementById("00N5j000008EH8N").required=false;
-				document.getElementById("00N5j000008EH8S").required=false;
-				document.getElementById("00N5j000008EH8h").required=false;
+				document.getElementById("00N5j000008EH8N").required = false;
+				document.getElementById("00N5j000008EH8S").required = false;
+				document.getElementById("00N5j000008EH8h").required = false;
 			}
-			
-				
+
+
+		}
+
+		function submitForm(){
+
+			event.preventDefault();
+			if (document.getElementById("CheckBoxDeclare").checked){
+				document.getElementById("agreementErrorMsgId").style.visibility = 'hidden';
+				document.getElementById("formId").submit();
+			}
+			else{
+				document.getElementById("agreementErrorMsgId").style.visibility = 'visible';
+			}
 		}
 
 	</script>
@@ -56,7 +68,7 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <body>
-	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+	<form id="formId" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="submitForm()">
 
 		<input type=hidden name="oid" value="00D5j0000036001">
 		<input type=hidden name="retURL" value="https://iqbalaust.github.io/iqbalaustwebtolead/">
@@ -156,7 +168,8 @@
 					</td>
 					<td>
 						<input id="00N5j000008EGyh" name="00N5j000008EGyh" size="20" type="text" maxlength="80"
-							value="0.00" placeholder="0.00" style="font-size:15px;width:200px;" required="true" class="form-control"/>
+							value="0.00" placeholder="0.00" style="font-size:15px;width:200px;" required="true"
+							class="form-control" />
 					</td>
 				</tr>
 
@@ -374,7 +387,7 @@
 					</td>
 					<td>
 						<input id="00N5j000008EH8S" maxlength="100" name="00N5j000008EH8S" size="20" type="text"
-							 class="form-control" placeholder="PLEASE KEY IN YOUR STAFF ID"
+							class="form-control" placeholder="PLEASE KEY IN YOUR STAFF ID"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
 					</td>
 				</tr>
@@ -385,7 +398,7 @@
 					</td>
 					<td>
 						<input id="00N5j000008EH8h" maxlength="100" name="00N5j000008EH8h" size="20" type="text"
-							 class="form-control" placeholder="PLEASE KEY IN YOUR STAFF CONTACT NO"
+							class="form-control" placeholder="PLEASE KEY IN YOUR STAFF CONTACT NO"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
 					</td>
 				</tr>
@@ -436,10 +449,20 @@
 					<td>
 					</td>
 				</tr>
-
+				<tr id="agreementRowId">
+					<td id="TableCell237" colspan="2" style="color:White;">
+						<span style="color:Black;font-family:Century Gothic;font-size:11pt;font-weight:normal;font-style:italic;text-decoration:underline;">
+							<input id="CheckBoxDeclare" type="checkbox" name="CheckBoxDeclare"/>
+							<label for="CheckBoxDeclare">&nbsp; I agree on above declaration.</label>
+						</span>&nbsp;
+						<span id="agreementErrorMsgId" style="color: red; font-size: 11pt; visibility:hidden">*
+								Please tick before submission.
+						</span>
+					</td>
+				</tr>
 				<tr>
 					<td>
-						<input type="submit" name="submit" class="btn btn-primary">
+						<input type="submit" name="btnSubmit" class="btn btn-primary"/>
 					</td>
 					<td>
 
