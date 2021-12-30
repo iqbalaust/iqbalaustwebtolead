@@ -1,0 +1,253 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<head>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+table {
+margin-left:auto;
+margin-right:auto;
+}
+
+.hide {
+  display:none;
+}
+
+tr{
+	height: 50px;
+}
+</style>
+
+</head
+
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D5j0000036001">
+<input type=hidden name="retURL" value="https://bankislammalaysiaberhad2.lightning.force.com/lightning/o/Lead/list?filterName=Recent">
+
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="zakir@telcowin.com">      -->
+<!--  ----------------------------------------------------------------------  -->
+
+<div class = "container mt-3">
+ <img src="../Bank Islami/images/logo.png" class="mx-auto d-block"/>
+ <p class="bg-dark text-white text-center">EZXCESS FINANCING APPLICATION FORM</p>
+ 
+<table>
+	<tr>
+		<td>
+			<label for="last_name" class="form-label"><span>CUSTOMER NAME</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp; </label>
+		</td>
+		<td>
+			<input  id="last_name" maxlength="80" name="last_name" size="20" type="text"  class="form-control" placeholder="PLEASE KEY IN YOUR FULL NAME" required="true" style="font-size:15px;width:500px; text-transform:uppercase" />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="phone" class="form-label"><span>CONTACT NO</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp;</label>
+		</td>
+		<td>
+			<input  id="phone" maxlength="40" name="phone" size="20" type="text" required="true" class="form-control" placeholder="PLEASE KEY IN YOUR CONTACT NO" style="font-size:15px;width:500px;"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<span>PRODUCT</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp;
+		</td>
+		<td>
+			<select  id="00N5j000008EMUl" name="00N5j000008EMUl" title="Preferred Branch" class="form-control selectpicker" style="font-size:15px;width:500px;" required>
+				<option value="">PLEASE CHOOSE YOUR PRODUCT</option>
+				<option value = "01t5j000000nizrAAA">Personal Financing For Professional Program</option>
+				<option value = "01t5j000000nizsAAA">Personal Financing-i Non Package</option>
+				<option value = "01t5j000000niztAAA">Personal Financing-i Package</option>
+				<option value = "01t5j000000nizuAAA">Personal Cash Line-i</option>
+				<option value = "01t5j000000nizvAAA">ASB Financing-i</option>
+				<option value = "01t5j000000nizwAAA">Baiti Home Financing-i</option>
+				<option value = "01t5j000000nizxAAA">Wahdah Home Refinancing-i</option>
+				<option value = "01t5j000000nizyAAA">Vehicle Financing-i</option>
+				<option value = "01t5j000000nizzAAA">Vehicle Financing-i GradONE</option>
+				<option value = "01t5j000000nj00AAA">Superbike Financing-i</option>
+				<option value = "01t5j000000nj01AAA">Bank Islam Credit Card-i</option>
+				<option value = "01t5j000000nj02AAA">Bank Islam Debit Card-i</option>
+				<option value = "01t5j000000nj03AAA">Ar-Rahnu Tawarruq</option>
+				<option value = "01t5j000000nj04AAA">Takaful Protection</option>
+				<option value = "01t5j000000nj05AAA">Unit Trust</option>
+				<option value = "01t5j000000nj06AAA">Will Writing</option>
+				<option value = "01t5j000000nj07AAA">Al-Awfar</option>
+				<option value = "01t5j000000nj08AAA">iGain</option>
+				<option value = "01t5j000000nj09AAA">Wafiyah Investment Account</option>
+				<option value = "01t5j000000nj0AAAQ">Term Deposit-i Tawarruq</option>
+				<option value = "01t5j000000nj0BAAQ">Qard Saving Account-i</option>
+				<option value = "01t5j000000nj0CAAQ">Basic Savings Account-i</option>
+				<option value = "01t5j000000nj0DAAQ">Qard Current Account – i</option>
+				<option value = "01t5j000000nj0EAAQ">Basic Current Account-i</option>
+				<option value = "01t5j000000nj0FAAQ">Program Pembiayaan Mikro iTEKAD</option>
+				<option value = "01t5j000000nj0GAAQ">Biz Financing Program</option>
+				<option value = "01t5j000000nj0HAAQ">SME Automation and Digitalisation Facility (ADF)</option>
+				<option value = "01t5j000000nj0IAAQ">TNB Vendor Financing Program</option>
+				<option value = "01t5j000000nj0JAAQ">SME Biz G.R.O.W Financing Program</option>
+				<option value = "01t5j000000nj0KAAQ">Business Premise Financing Program (BPF)</option>
+				<option value = "01t5j000000nj0LAAQ">Bank Islam Women in Business (BI WinBiz)</option>
+				<option value = "01t5j000000nj0MAAQ">Start-up Financing Program</option>
+				<option value = "01t5j000000nj0NAAQ">Targeted Relief & Recovery Facility (TRRF)</option>
+				<option value = "01t5j000000nj0OAAQ">SME – PENJANA Tourism Financing (PTF)</option>
+				<option value = "01t5j000000nj0PAAQ">Go Halal SME Financing Program</option>
+				<option value = "01t5j000000nj0QAAQ">Shariah Compliance SME Financing Scheme (SSFS) 3.0</option>
+				<option value = "01t5j000000nj0RAAQ">All Economic Sector Facility (AES)</option>
+
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<span>APPLIED AMOUNT(RM)</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp;
+		</td>
+		<td>
+			<input  id="00N5j000008EGyh" name="00N5j000008EGyh" size="20" type="text" maxlength="80" value="0.00" placeholder="0.00" style="font-size:15px;width:200px;" required="true"/>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label for="state"><span>PREFERRED STATE</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp;</label>
+		</td>
+		<td>
+			<select  id="state" name="state" title="Preferred Branch" class="form-control selectpicker" style="font-size:15px;width:500px;" required>
+				<option selected="selected" value="">PLEASE CHOOSE YOUR PREFERRED STATE</option>
+				<option value="JOHOR">JOHOR</option>
+				<option value="KEDAH">KEDAH</option>
+				<option value="KELANTAN">KELANTAN</option>
+				<option value="MELAKA">MELAKA</option>
+				<option value="NEGERI SEMBILAN">NEGERI SEMBILAN</option>
+				<option value="PAHANG">PAHANG</option>
+				<option value="PERAK">PERAK</option>
+				<option value="PERLIS">PERLIS</option>
+				<option value="PULAU PINANG">PULAU PINANG</option>
+				<option value="SABAH">SABAH</option>
+				<option value="SARAWAK">SARAWAK</option>
+				<option value="SELANGOR">SELANGOR</option>
+				<option value="TERENGGANU">TERENGGANU</option>
+				<option value="WP KUALA LUMPUR">WP KUALA LUMPUR</option>
+				<option value="WP LABUAN">WP LABUAN</option>
+				<option value="WP PUTRAJAYA">WP PUTRAJAYA</option>
+
+				</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<span>PREFERRED BRANCH</span> &nbsp; <span style="color:Tomato;">*</span> &nbsp;
+		</td>
+		<td>
+			<select  id="00N5j000008EAOm" name="00N5j000008EAOm" title="Preferred Branch" class="form-control selectpicker" style="font-size:15px;width:500px;" required>
+				<option value="">PLEASE CHOOSE YOUR PREFERRED BRANCH</option>
+				<option value = "a015j000007cxOqAAI">010-JLN TUN RAZAK</option>
+				<option value = "a015j000007cxOrAAI">086-MENARA TELEKOM</option>
+				<option value = "a015j000007cxOsAAI">092-AMPANG</option>
+				<option value = "a015j000007ciInAAI">001-MENARA BANK ISLAM</option>
+				<option value = "a015j000007cxNMAAY">007-KL SENTRAL</option>
+				<option value = "a015j000007cxP5AAI">085-UNIVERSITI MALAYA</option>
+				<option value = "a015j000007cxOvAAI">017-MEDAN MARA</option>
+				<option value = "a015j000007cxOwAAI">081-BANDAR WAWASAN</option>
+				<option value = "a015j000007cxOxAAI">099-WANGSA MAJU</option>
+				<option value = "a015j000007cxPKAAY">026-PETALING JAYA, SEKSYEN14</option>
+				<option value = "a015j000007cxPPAAY">074-SELAYANG</option>
+				<option value = "a015j000007cxPFAAY">113-SEMARAK</option>
+			</select>
+		</td>
+	</tr>
+
+<tr>
+<td>
+<span>DO YOU KNOW ANY OF BANK ISLAM MALAYSIA BERHAD STAFF?</span>&nbsp; <span style="color:Tomato;">*</span> &nbsp;
+</td>
+<td>
+<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> &nbsp; Yes
+<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp; No
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="city">City</label>
+</td>
+<td>
+<input  id="city" maxlength="40" name="city" size="20" type="text" />
+</td>
+</tr>
+
+
+
+
+
+<tr class= "hide">
+<td>
+<label for="lead_source" class = "hide">Lead Source</label>
+</td>
+<td>
+<select  id="lead_source" name="lead_source" class= "hide">
+<option selected="selected" value="Website">Website</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+Remarks:
+</td>
+<td>
+<textarea  id="00N5j000008E9wF" name="00N5j000008E9wF" type="text" wrap="soft"></textarea>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+
+<tr>
+<td>
+<input type="submit" name="submit" class="btn btn-primary">
+</td>
+<td>
+
+</td>
+</tr>
+
+</table>
+
+
+
+
+</div>
+
+</form>
