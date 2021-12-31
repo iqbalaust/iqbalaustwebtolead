@@ -49,9 +49,10 @@
 
 		}
 		
+		/*
 		function submitForm() {
 
-			
+			//validaterequired();
 			event.preventDefault();
 			if (document.getElementById("CheckBoxDeclare").checked) {
 				document.getElementById("agreementErrorMsgId").style.visibility = 'hidden';
@@ -60,20 +61,109 @@
 			else {
 				document.getElementById("agreementErrorMsgId").style.visibility = 'visible';
 			}
+			
+		}
+		*/
+		function submitForm() {
+			event.preventDefault();
+			if (document.getElementById("CheckBoxDeclare").checked) {
+				document.getElementById("agreementErrorMsgId").style.visibility = 'hidden';
+				document.getElementById("formId").submit();
+			}
+			else {
+				//event.preventDefault();
+				document.getElementById("agreementErrorMsgId").style.visibility = 'visible';
+			}
+
+		 
+
 		}
 
-		function validaterequired(){
-			debugger;
-			document.querySelectorAll("#last_name, #phone, #00N5j000008EMUl, #00N5j000008EGyh, #state, #00N5j000008EAOm, #00N5j000008EH8N, #00N5j000008EH8S, #00N5j000008EH8h, #00N5j000008E9wF").forEach(function(val){
-					if(val.required = true){
+	/*	function validaterequired(){
+			
+			//submitForm();
+			//document.querySelectorAll("#last_name, #phone, #00N5j000008EMUl, #00N5j000008EGyh, #state, #00N5j000008EAOm, #00N5j000008EH8N, #00N5j000008EH8S, #00N5j000008EH8h, #00N5j000008E9wF").forEach(function(val){
+			/*	document.querySelectorAll("#ifYesStaffName, #ifYesStaffId, #ifYesStaffContactNo").forEach(function(val){		
+				if(val.required = true){
 						if(val.value == null || val.value == ""){
-							document.querySelectorAll("#a, #b, #c, #d,#e, #f, #g, #h, #i, #j").forEach(function(val1){
+							document.querySelectorAll("#f, #g, #h, #i").forEach(function(val1){
 								val1.style.visibility = 'visible';
 							});
 						}
 					}
 			});
+		
+			//submitForm();
+				var lastname = document.getElementById("last_name");
+				var phone = document.getElementById("phone");
+				var product = document.getElementById("00N5j000008EMUl");
+				var state = document.getElementById("state");
+				var branch = document.getElementById("00N5j000008EAOm");
+				var staffName = document.getElementById("00N5j000008EH8N");
+
+				if(lastname.required){
+					if((lastname.value == null) || (lastname.value == "") ){
+						document.getElementById("a").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else 
+					document.getElementById("a").style.visibility = 'hidden';
+
+				} 
+
+				if(phone.required){
+					if((phone.value == null) || (phone.value == "") ){
+						document.getElementById("b").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else 
+					document.getElementById("b").style.visibility = 'hidden';
+
+				} 
+				
+				if(product.required){
+					if((product.value == null) || (product.value == "") ){
+						document.getElementById("c").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else 
+					document.getElementById("c").style.visibility = 'hidden';
+
+				} 
+
+				if(state.required){
+					if((state.value == null) || (state.value == "") ){
+						document.getElementById("d").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else 
+					document.getElementById("d").style.visibility = 'hidden';
+
+				} 
+
+				if(branch.required){
+					if((branch.value == null) || (branch.value == "") ){
+						document.getElementById("e").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else 
+					document.getElementById("e").style.visibility = 'hidden';
+
+				} 
+
+			if(staffName.required == true){
+					if((staffName.value == null) || (staffName.value == "") ){
+						document.getElementById("g").style.visibility = 'visible';
+						//event.preventDefault();
+					}
+					else if(staffName.required == false)
+					document.getElementById("g").style.visibility = 'hidden';
+
+				} 
+				
+			
 		}
+		*/
 
 
 	</script>
@@ -542,7 +632,7 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="submit" name="submit" id="mySubmitBtn" class="btn btn-primary" onclick="validaterequired()"/>
+						<input type="submit" name="btnsubmit"  class="btn btn-primary" />
 					</td>
 					<td>
 
