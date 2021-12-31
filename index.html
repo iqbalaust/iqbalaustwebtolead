@@ -62,7 +62,18 @@
 			}
 		}
 
+		function validaterequired(){
 
+			document.querySelectorAll("#last_name, #phone, #00N5j000008EMUl, #00N5j000008EGyh, #state, #00N5j000008EAOm, #00N5j000008EH8N, #00N5j000008EH8S, #00N5j000008EH8h, #00N5j000008E9wF").forEach(function(val){
+					if(val.required = true){
+						if(val.value == null || val.value == ""){
+							document.querySelectorAll("#a, #b, #c, #d,#e, #f, #g, #h, #i, #j").forEach(function(val1){
+								val1.style.visibility = 'visible';
+							});
+						}
+					}
+			});
+		}
 
 
 	</script>
@@ -99,6 +110,9 @@
 						<input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control"
 							placeholder="PLEASE KEY IN YOUR FULL NAME" required="true"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
+							<span id="a" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -111,6 +125,9 @@
 						<input id="phone" maxlength="40" name="phone" size="20" type="text" required="true"
 							class="form-control" placeholder="PLEASE KEY IN YOUR CONTACT NO"
 							style="font-size:15px;width:500px;" />
+							<span id="b" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -163,6 +180,9 @@
 							<option value="01t5j000000nj0RAAQ">All Economic Sector Facility (AES)</option>
 
 						</select>
+						<span id="c" style="color: red; font-size: 11pt; visibility:hidden">*
+							This field is required.
+						</span>
 					</td>
 				</tr>
 
@@ -204,6 +224,9 @@
 							<option value="WP PUTRAJAYA">WP PUTRAJAYA</option>
 
 						</select>
+						<span id="d" style="color: red; font-size: 11pt; visibility:hidden">*
+							This field is required.
+						</span>
 					</td>
 				</tr>
 
@@ -357,6 +380,9 @@
 							<option value="a015j000007d0DnAAI">098-ALAMESRA</option>
 							<option value="a015j000007d0DoAAI">142-KENINGAU</option>
 						</select>
+						<span id="e" style="color: red; font-size: 11pt; visibility:hidden">*
+							This field is required.
+						</span>
 					</td>
 				</tr>
 
@@ -368,6 +394,9 @@
 						<span><input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"
 								required> &nbsp;Yes
 							<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"> &nbsp; No
+						</span>
+						<span id="f" style="color: red; font-size: 11pt; visibility:hidden">*
+							This field is required.
 						</span>
 					</td>
 
@@ -382,6 +411,9 @@
 						<input id="00N5j000008EH8N" maxlength="100" name="00N5j000008EH8N" size="20" type="text"
 							class="form-control" placeholder="PLEASE KEY IN YOUR STAFF NAME"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
+							<span id="g" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -393,6 +425,9 @@
 						<input id="00N5j000008EH8S" maxlength="100" name="00N5j000008EH8S" size="20" type="text"
 							class="form-control" placeholder="PLEASE KEY IN YOUR STAFF ID"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
+							<span id="h" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -404,6 +439,9 @@
 						<input id="00N5j000008EH8h" maxlength="100" name="00N5j000008EH8h" size="20" type="text"
 							class="form-control" placeholder="PLEASE KEY IN YOUR STAFF CONTACT NO"
 							style="font-size:15px;width:500px; text-transform:uppercase" />
+							<span id="i" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -426,6 +464,9 @@
 						<textarea id="00N5j000008E9wF" name="00N5j000008E9wF" type="text" wrap="soft" required="true"
 							placeholder="PLEASE KEY IN REMARKS" class="form-control"
 							style="font-size:15px;width:500px;text-transform:uppercase"></textarea>
+							<span id="j" style="color: red; font-size: 11pt; visibility:hidden">*
+								This field is required.
+							</span>
 					</td>
 				</tr>
 
@@ -501,7 +542,7 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="submit" name="submit" id="mySubmitBtn" class="btn btn-primary" />
+						<input type="submit" name="submit" id="mySubmitBtn" class="btn btn-primary" onclick="validaterequired()"/>
 					</td>
 					<td>
 
