@@ -48,7 +48,7 @@
 
 
 		}
-		/* 
+		
 		function submitForm() {
 
 			
@@ -62,16 +62,8 @@
 			}
 		}
 
-	*/
-		let submitButton = document.getElementById('mySubmitBtn');
-		let checkbox = document.getElementById('CheckBoxDeclare');
 
-		submitButton.addEventListener('submit', function (e) {
-			if (!checkbox.checked) {
-				e.preventDefault();
-				document.getElementById("agreementErrorMsgId").style.visibility = 'visible';
-			}
-		});
+
 
 	</script>
 
@@ -80,7 +72,7 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <body>
-	<form id="formId" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+	<form id="formId" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="submitForm()">
 
 		<input type=hidden name="oid" value="00D5j0000036001">
 		<input type=hidden name="retURL" value="https://iqbalaust.github.io/iqbalaustwebtolead/">
